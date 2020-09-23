@@ -1,0 +1,274 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4c4b4b21;
+    margin:0px;
+    padding:0px;
+    overflow: hidden;
+}
+#root{
+    padding: 1em;
+}
+
+.active-filter{
+    background-color: #197119 !important;
+    color: white;
+}
+.developer-notes{
+    text-align: center;
+    padding: 1em 0px;
+}
+
+.space-title{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50%;
+}
+
+.app_wrapper{
+    display: flex;
+}
+
+.app_wrapper .sidepanel{
+    min-width: 18em;
+    max-width: 100%;
+    background-color: white;
+}
+
+.app_wrapper .content-section{
+    overflow: auto;
+    padding: 0em;
+}
+.sidepane{
+    min-width: 15%;
+    max-width: 100%;
+    border-radius: 6px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.cards_item {
+    display: flex;
+    padding: 0px 1rem;
+    margin: 0px 0px 1em 0px;
+}
+
+.card_image {
+    padding: 1em;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    background-color: #ededed;
+}
+
+.card_image .card-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.card_image img {
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+.bg-white{
+    background-color: white;
+}
+
+.card {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1em;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.card .card-wrapper {
+    padding: 1em;
+}
+
+.card_content {
+    padding: 1rem 0px;
+}
+
+.card_content .additional_info {
+    font-size: 70%;
+    /* font-family: none; */
+    font-weight: bold;
+}
+
+.card_title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+    font-weight: bolder;
+    color: #6565e2;
+}
+
+.card_text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
+.m-0 {
+    margin: 0px;
+}
+
+.p-0 {
+    padding: 0px;
+}
+
+img.ifbroken {
+    position: relative;
+}
+
+img.ifbroken:after {
+    content: "failed to load : " attr(alt);
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 2em;
+    background-color: #fff;
+    padding:0.5em;
+}
+
+.sidepane section.filter-container{
+    padding: 0px 1rem;
+}
+.sidepane .heading{
+    padding: 2px 1em;
+
+}
+.sidepane section.filter-container h5{
+    margin:0px;
+    text-align:center;
+    font-family: 'Montserrat', sans-serif;
+}
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.d-flex {
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+
+.filter-items-container{
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -webkit-box-pack: justify!important;
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;    
+    margin: 1em 0px;
+}
+.justify-content-between {
+    -webkit-box-pack: justify!important;
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+.filter-items-container li{
+    min-width: 4em;
+    background-color: #9de89d;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    margin: 8px 0px 0px 0px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.sidepane, .content-section{
+    height:90vh;
+}
+
+@media (min-width: 100px) and  (max-width: 700px) {
+    .app_wrapper{
+        flex-direction: column;
+        max-height: 88vh;
+        overflow-y: auto;
+    }
+    .sidepane{
+        margin-bottom: 1em;
+    }
+    .cards_item {
+        width: 100%;
+        padding:0px;
+    }
+    .app_wrapper .content-section {
+        overflow: unset;        
+    }
+    .filter-items-container li {
+        min-width: 47%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+    .cards_item {
+        width: 50%;
+    }
+    .sidepane{
+        /* max-height: 83vh; */
+        overflow: auto;
+    }
+    .filter-items-container li {
+        min-width: 3em;
+        padding: 0.2rem;
+        max-width: 3em;
+    }
+    .sidepane section.filter-container h5 {
+        font-size: 50%;
+    }
+    .filter-items-container li {
+        min-width: 3em !important;
+        max-width: 3em;
+        padding: 0px !important;
+        font-size: 8pt;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sidepane{
+        /* max-height: 83vh; */
+        overflow: auto;
+    }
+
+    .cards_item {
+        width: 25%;
+    }
+    .filter-items-container li {
+        min-width: 3em;
+        padding: 0.2rem !important;
+        max-width: 4em;
+    }
+    .sidepane section.filter-container h5 {
+        font-size: 100%;
+    }
+}
+
